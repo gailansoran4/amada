@@ -20,7 +20,6 @@ exports.getprizes = async (req, res, next) => {
   }
 };
 
-// Serve images using Express static middleware
 
 exports.insertprize = async (req, res, next) => {
   console.log(req.file, "--------------------");

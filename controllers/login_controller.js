@@ -9,7 +9,7 @@ const login = async (req, res, next) => {
   try {
     const data = await shop.findOne({ phone: req.headers.phone, password: req.headers.password });
 
-    if (!data) {
+    if (data!) {
       return res.status(404).send({ error: "User not found" });
     }
 
